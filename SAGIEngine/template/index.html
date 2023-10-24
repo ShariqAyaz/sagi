@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebSocket Demo</title>
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.0/socket.io.js" integrity="sha512-zpwALZtEUgguEViSrR8yVZpFH0QBBtr9gJ6QUHglri7i+SyUcrr/3o9mfMI12REAGVqMmkwGzkEguFBF7LOpFw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    const socket = io("ws://localhost:5000/socket.io/");
+
+    socket.on("connect", function() {
+      console.log("Client connected");
+    });
+
+    socket.on("message", function(message) {
+      console.log("Received message:", message);
+    });
+
+    document.getElementById("send").addEventListener("click", function() {
+      socket.emit("message", "Hello, Server!");
+    });
+  </script>
+  <button id="send">Send Message</button>
+</body>
+</html>

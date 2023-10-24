@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Requests</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  <script src="{{ url_for('static',filename='socket.io.js') }}"></script>
+
+  <script src="{{ url_for('static',filename='jquery-3.6.0.min.js') }}"></script>
+
+  <script src="{{ url_for('static',filename='js/bootstrap.js') }}"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+</head>
+
+<body>
+
+  <div class="p-3 mb-2 bg-success text-white text-center display-5">
+    Request and Response
+  </div>
+
+  <div class="container">
+    <h4>
+      <b class="text-success " style="padding-top:4px;margin-top:4px">Response</b>
+    </h4>
+  </div>
+
+  <div class="container border">
+
+    <div id="response_msg">
+
+    </div>
+    
+  </div>
+
+  <br><br><br><br><br>
+
+  <div class="container">
+    <form id="req_from" onsubmit="scrollToLatest(); return false;">
+      <div class="textbox">
+        <div class="row">
+          <div class="col-lg-8">
+            <textarea class="form-control" type="text" id="message-input" autocomplete="off"></textarea>
+          </div>
+          <div class="col-lg-4">
+            <input type="submit" class="btn btn-outline-success btn-lg" id="request" value="REQUEST">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+
+  <script src="{{ url_for('static',filename='script.js') }}"></script>
+
+</body>
+
+</html>

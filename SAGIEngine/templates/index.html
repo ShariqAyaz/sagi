@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Example</title>
+</head>
+<body>
+    <h1>WebSocket Example</h1>
+
+    <div id="messages"></div>
+
+    <input id="message-input" type="text">
+    <button id="send-button">Send</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+    <script type="text/javascript">
+        const socket = io.connect('http://localhost:5000/skt');
+
+        socket.on('connect', function() {
+            console.log('Connected to WebSocket server');
+        });
+
+        socket.on('disconnect', function() {
+            console.log('Disconnected from WebSocket server');
+        });
+
+        socket.on('response', function(response) {
+            console.log('Received response:', response);
+            document.getElementById('messages').innerHTML += '<p>' + response + '</p>';
+        });
+
+        document.getElementById('send-button').addEventListener('click', function() {
+            const message = document.getElementById('message-input').value;
+            console.log('Sending message:', message);
+            socket.emit('message', message);
+        });
+    </script>
+</body>
+</html>
