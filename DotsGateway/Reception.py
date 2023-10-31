@@ -1,3 +1,16 @@
+"""
+    Copyright (c) 2023 Muhammad Shariq Ayaz
+    All rights reserved.
+    
+    This code is the intellectual property of Muhammad Shariq Ayaz, and it is protected by
+    copyright law. Unauthorized use or copying of this code, in whole or in part,
+    is strictly prohibited without the express written consent of "Muhammad Shariq Ayaz".
+    
+    For inquiries about licensing or use of this code, please contact:
+    
+    Github: /shariqayaz
+    Email: gr8shariq@gmail.com
+"""
 import time
 import redis
 from TheFactory import TheFactory

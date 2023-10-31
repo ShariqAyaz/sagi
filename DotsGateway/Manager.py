@@ -8,7 +8,7 @@
     
     For inquiries about licensing or use of this code, please contact:
     
-    Github: /shariqayaztech
+    Github: /shariqayaz
     Email: gr8shariq@gmail.com
 """
 import redis

@@ -13,7 +13,7 @@
 """
 import time
 import asyncio
-import aiohttp
+#import aiohttp
 import redis
 import json
 from flask import Flask, render_template, request

@@ -34,7 +34,7 @@ class FlaskSRV():
 
         CORS(app, origins={
             r"/*": {
-                "origins": ["http://localhost:5000", "http://127.0.0.1:5000","*"],
+                "origins": ["http://localhost:5000", "http://127.0.0.1:5000","*","http://10.249.11.208"],
                 "headers": ["Content-Type", "Authorization"],
                 "methods": ["GET", "POST","PATCH", "PUT", "DELETE"]
             }
